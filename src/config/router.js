@@ -7,6 +7,8 @@ import request from 'superagent';
 import App from '../App';
 
 import Refer from '../pages/refer_a_friend';
+import Product from '../pages/product';
+import Details from '../pages/details';
 
 class AppRouter extends Component{
  
@@ -16,6 +18,8 @@ class AppRouter extends Component{
         <Switch>
 
             <Route exact path={"/"} component={App} />
+            <Route exact path={"/dev/products"} component={Product} />
+            <Route exact path={"/dev/product-details"} component={Details} />
             <Route exact path={"/dev/refer_a_friend"} component={Refer} />
 
         </Switch>

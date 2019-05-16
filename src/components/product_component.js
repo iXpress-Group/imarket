@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import '../css/pages/product.css';
+import {Link} from 'react-router-dom';
 
-class Product extends Component {
+class ProductComponent extends Component {
 
 
     constructor(props){
@@ -17,11 +18,11 @@ class Product extends Component {
             <div className="col-md-3 col-sm-6">
                 <div className="product-grid">
                     <div className="product-image">
-                        <a href={this.props.imgUrl}>
+                        <Link to={'/dev/product-details'}>
                             <img className="pic-1" src={this.props.imgUrl} alt={''}/>
                             <img className="pic-2" src={this.props.imgUrl_alt} alt={''}/>
 
-                        </a>
+                        </Link>
                         <span className="product-discount-label">-{this.props.discount}%</span>
                         <ul className="social">
                             <li><a href="" data-tip="Quick View"><i className="fa fa-search"/></a></li>
@@ -51,4 +52,4 @@ class Product extends Component {
     }
 }
 
-export default Product;
+export default ProductComponent;
