@@ -12,11 +12,11 @@ class Home extends Component {
     }
 
     products = {
-        name : 'Fish Masala',
+        name: 'Fish Masala',
         imgUrl: require('../assets/images/fish_masala5.jpg'),
         imgUrl_alt: require('../assets/images/fish_masala3.jpg'),
         price: 400,
-        discount:25,
+        discount: 25,
         former_price: 500
     };
     products1 = {
@@ -24,16 +24,24 @@ class Home extends Component {
         imgUrl: require('../assets/images/onions.jpeg'),
         imgUrl_alt: require('../assets/images/onions_alt.jpeg'),
         price: 200,
-        discount:12,
+        discount: 12,
         former_price: 224
     };
 
 
-    arr = [this.products, this.products1];
+    arr = [this.products, this.products1, this.products, this.products1, this.products, this.products1, this.products, this.products1];
     path = this.arr.map((num) => num);
 
+    createProducts = () => {
+        let table = [];
+
+        for (let i = 0; i < this.path.length; i++) {
+            table.push(<Product{...this.path[i]}/>)
+        }
+        return table
+    };
+
     render() {
-        console.log(this.products.former_price.toString());
         return (
             <div>
                 <Header/>
@@ -47,18 +55,21 @@ class Home extends Component {
 
                 <div className="container">
                     <div className="row">
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
-                        <Product {...this.path[0]}/>
-                        <Product {...this.path[1]}/>
+
+                        {this.createProducts()}
+
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
+                        {/*<Product {...this.path[0]}/>*/}
+                        {/*<Product {...this.path[1]}/>*/}
                     </div>
                 </div>
 
