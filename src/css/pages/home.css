@@ -1,8 +1,16 @@
+.Home {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
 .Home .home-container {
-  margin: 10em;
+  margin: 3em 10em;
 }
 .Home .home-container .home-link {
   color: red;
+}
+.Home .home-img {
+  margin: 3em 0;
 }
 
 /*# sourceMappingURL=home.css.map */
