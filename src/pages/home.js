@@ -30,7 +30,7 @@ class Home extends Component {
 
     // Products will be fetched from the array and added to this array
 
-    arr = [this.products, this.products1];
+    arr = [this.products, this.products1,this.products, this.products1,this.products, this.products1,this.products, this.products1];
     path = this.arr.map((num) => num);
 
     createProducts = () => {
