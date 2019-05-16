@@ -1,4 +1,12 @@
 .Home {
+ .home-comingsoon{
+   color:darkred;
+   text-transform: uppercase;
+   letter-spacing: 0.5rem;
+   font-style: italic;
+   font-size:2.5em;
+   font-weight: 700;
+ }
   align-items: center;
   align-content: center;
   text-align: center;
@@ -12,6 +20,6 @@
   }
 
   .home-img{
-    margin: 3em 0;
+    margin: 1em 0;
   }
 }

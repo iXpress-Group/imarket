@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+// import ReactCountdownClock from 'react-countdown-clock';
+import Countdown from '../components/countdown';
 
 import '../css/pages/home.css';
 
@@ -12,12 +14,18 @@ class Home extends Component {
         return (
             <div className="Home">
                 <Header/>
+                <br/>
+
                 <div className="home-container">
+                    <Countdown date={`2019-05-31T00:00:00`}/>
+                    <p className="home-comingsoon">Coming soon!!!</p>
+
                     <img className="home-img" src={require('../assets/images/coverpage.png')} alt=""/>
 
                     <p>This is the homepage. Click <Link className='home-link' to={'dev/products'}>here</Link> to go to
                         the products page</p>
-                    <p>This is the homepage. Click <Link className='home-link' to={'dev/refer_a_friend'}>here</Link> to go to
+                    <p>This is the homepage. Click <Link className='home-link' to={'dev/refer_a_friend'}>here</Link> to
+                        go to
                         the refer a friend page</p>
 
 
