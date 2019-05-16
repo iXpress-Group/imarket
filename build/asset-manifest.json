@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/imarket/static/css/main.9fe72fa0.chunk.css",
+    "main.js": "/imarket/static/js/main.86e4ec4f.chunk.js",
+    "main.js.map": "/imarket/static/js/main.86e4ec4f.chunk.js.map",
+    "runtime~main.js": "/imarket/static/js/runtime~main.ffe081d2.js",
+    "runtime~main.js.map": "/imarket/static/js/runtime~main.ffe081d2.js.map",
+    "static/js/2.3593b57a.chunk.js": "/imarket/static/js/2.3593b57a.chunk.js",
+    "static/js/2.3593b57a.chunk.js.map": "/imarket/static/js/2.3593b57a.chunk.js.map",
+    "index.html": "/imarket/index.html",
+    "precache-manifest.4104336de042fc6c5ccb7098084d9948.js": "/imarket/precache-manifest.4104336de042fc6c5ccb7098084d9948.js",
+    "service-worker.js": "/imarket/service-worker.js",
+    "static/css/main.9fe72fa0.chunk.css.map": "/imarket/static/css/main.9fe72fa0.chunk.css.map",
+    "static/media/fish_masala3.jpg": "/imarket/static/media/fish_masala3.50498849.jpg",
+    "static/media/fish_masala5.jpg": "/imarket/static/media/fish_masala5.23ad005b.jpg",
+    "static/media/logo.svg": "/imarket/static/media/logo.5d5d9eef.svg"
+  }
+}

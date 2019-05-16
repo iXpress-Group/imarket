@@ -28,55 +28,40 @@ class Home extends Component {
         former_price: 224
     };
 
+    // Products will be fetched from the array and added to this array
 
-    arr = [this.products, this.products1, this.products, this.products1, this.products, this.products1, this.products, this.products1];
+    arr = [this.products, this.products1];
     path = this.arr.map((num) => num);
 
     createProducts = () => {
-        let table = [];
+        let products = [];
 
         for (let i = 0; i < this.path.length; i++) {
-            table.push(<Product{...this.path[i]}/>)
+            products.push(<Product{...this.path[i]}/>)
         }
-        return table
+        return products;
     };
 
     render() {
         return (
             <div>
+
                 <Header/>
+                <div className="Products-page">
 
-                <div className="product-title">
-                    <p>FRUITS</p>
-                    {/*// <!-- <br> -->*/}
-                </div>
+                    <div className="product-title">
 
-                {/*// <!-- ========================================Products==================== -->*/}
+                        <p>FRUITS</p>
 
-                <div className="container">
-                    <div className="row">
+                    </div>
 
-                        {this.createProducts()}
-
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
-                        {/*<Product {...this.path[0]}/>*/}
-                        {/*<Product {...this.path[1]}/>*/}
+                    <div className="container">
+                        <div className="row">
+                            {this.createProducts()}
+                        </div>
                     </div>
                 </div>
-
-
-                {/*// <!-- =============================FOOTER=======================  -->*/}
                 <Footer/>
-
             </div>
         )
     }

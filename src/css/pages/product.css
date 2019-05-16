@@ -7,7 +7,11 @@ body {
 	background-color: #fff;
 	font-family: 'arial', sans-serif;
 }
-
+.Products-page{
+    background-color: #fff;
+    font-family: 'arial', sans-serif;
+    margin: 0 5rem;
+}
 
 /*-----------------------------------Navbar------------------------*/
 .text-left {
@@ -63,7 +67,7 @@ body {
 .search-logo {
 	display: inline-flex;
 	width: 60%;
-	margin-top: 10px;
+	margin-top: 0.6rem;
 }
 
 /*=================================Menu Bar====================*/
@@ -126,29 +130,23 @@ body {
 .dropbtn {
   background-color: #3e821d;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 1rem;
+  font-size: 1rem;
   border: none;
   margin-top: 20px;
-  border-top-left-radius: 10px !important;
-  border-bottom-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-  margin-left: 250px !important;
+    border-radius: 0.6em !important;
+    margin-left: 250px !important;
 }
 
 .dropbtn-check {
   background-color: #3e821d;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 1rem;
+  font-size: 1rem;
   border: none;
   margin-top: 20px;
-  border-top-left-radius: 10px !important;
-  border-bottom-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-  margin-left: 250px !important;
+    border-radius: 0.7em !important;
+    margin-left: 250px !important;
 }
 
 .dropdown {
@@ -186,7 +184,7 @@ body {
 }
 
 .fa-shopping-basket {
-	margin-right: 10px;
+	margin-right: 0.6rem;
 }
 
 @media only screen and (max-width: 980px) {
@@ -239,14 +237,13 @@ body {
 	margin-top: 7%;
 	text-align: center;
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 2em;
 	color: #444;
-	/*z-index: 20;*/
+    background-color: #ddd;
+
+    /*z-index: 20;*/
 }
 
-.product-title p {
-	background-color: #ddd;
-}
 .product-grid .product-image{
     box-shadow: 0 3px 12px -4px rgba(0,0,0,.12);
     overflow: hidden;
