@@ -6,23 +6,27 @@ import {Fade} from "react-slideshow-image";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import CatSlide from '../components/cat_slide';
-import {Slide} from 'react-slideshow-image';
+// import {Slide} from 'react-slideshow-image';
+import {Zoom} from 'react-slideshow-image';
 
 // import ProductComponent from "../components/product_component";
 
 const fadeProperties = {
-    duration: 2000,
+    duration: 1000,
     transitionDuration: 1000,
     infinite: true,
-    indicators: false
+    indicators: true,
+    arrows: false,
 };
 
-const slideProperties = {
-    duration: 1000,
-    transitionDuration: 500,
+const zoomProperties = {
+    duration: 3000,
+    transitionDuration: 1000,
     infinite: true,
-    indicators: false,
-    arrows: false
+    indicators: true,
+    arrows: false,
+    autoplay:true,
+    scale:50
 };
 
 
@@ -59,10 +63,12 @@ class Home1 extends Component {
 
     slide1Imgs = {
         img1: require('../assets/images/onions.jpeg'),
-        img2: require('../assets/images/onions_alt.jpeg'),
-        img3: require('../assets/images/Chicken-Masala2.1.jpg'),
-        img4: require('../assets/images/Fruits2.jpg'),
-        img5: require('../assets/images/Seasoning _ Spices.jpg'),
+        img2: require('../assets/images/onions.jpeg'),
+        img3: require('../assets/images/onions.jpeg'),
+        img4: require('../assets/images/onions.jpeg'),
+        img5: require('../assets/images/onions.jpeg'),
+        img6: require('../assets/images/onions.jpeg'),
+        name: ['Onions','Onions Again','Chicken Masala','Fruits','Spices','Extra']
     };
     slide2Imgs = {
         img1: require('../assets/images/onions.jpeg'),
@@ -70,6 +76,8 @@ class Home1 extends Component {
         img3: require('../assets/images/onions.jpeg'),
         img4: require('../assets/images/onions.jpeg'),
         img5: require('../assets/images/onions.jpeg'),
+        img6: require('../assets/images/onions.jpeg'),
+        name: ['Onions','Onions Again','Chicken Masala','Fruits','Spices','Extra']
     };
     slide3Imgs = {
         img1: require('../assets/images/onions.jpeg'),
@@ -77,23 +85,32 @@ class Home1 extends Component {
         img3: require('../assets/images/onions.jpeg'),
         img4: require('../assets/images/onions.jpeg'),
         img5: require('../assets/images/onions.jpeg'),
+        img6: require('../assets/images/onions.jpeg'),
+        name: ['Onions','Onions Again','Chicken Masala','Fruits','Spices','Extra']
     };
-    arr1 = [this.slide1Imgs, this.slide2Imgs, this.slide3Imgs];
+    slide4Imgs = {
+        img1: require('../assets/images/onions.jpeg'),
+        img2: require('../assets/images/onions.jpeg'),
+        img3: require('../assets/images/onions.jpeg'),
+        img4: require('../assets/images/onions.jpeg'),
+        img5: require('../assets/images/onions.jpeg'),
+        img6: require('../assets/images/onions.jpeg'),
+        name: ['Onions','Onions Again','Chicken Masala','Fruits','Spices','Extra']
+    };
+    arr1 = [this.slide1Imgs, this.slide2Imgs, this.slide3Imgs,this.slide4Imgs];
     mapArr1 = this.arr1.map((num1) => num1);
     arr = [this.slide1, this.slide2, this.slide3, this.slide4];
     mapSlide = this.arr.map((num) => num);
 
 
-
     createCats = () => {
         let cats = [];
 
-        for (let i = 0; i < this.mapArr1.length; i++) {
-            cats.push(<CatSlide {...this.mapArr1[i]}/>)
+        for (let j = 0; j < this.mapArr1.length; j++) {
+            cats.push(<CatSlide {...this.mapArr1[j]}/>);
         }
         return cats;
     };
-
 
 
     createSlides = () => {
@@ -116,17 +133,18 @@ class Home1 extends Component {
                     <Fade {...fadeProperties}>
                         {this.createSlides()}
                     </Fade>
+
                 </div>
 
 
                 <div>
-                    <h2 className="home-header-categories">iXpressMarket <strong>Categories</strong></h2>
+                    <h2 className="home-header-categories">iXpressMarket <strong style={{'color': 'orange'}}>Categories</strong></h2>
                 </div>
                 <br/><br/>
-                <div>
-                    <Slide {...slideProperties}>
-                    {this.createCats()}
-                    </Slide>
+                <div className="Slider">
+                    <Zoom {...zoomProperties}>
+                        {this.createCats()}
+                    </Zoom>
                 </div>
                 <br/>
                 <Footer/>

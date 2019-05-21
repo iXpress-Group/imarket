@@ -1,6 +1,8 @@
 .Slider {
-  margin-top: 3rem !important;
+  margin: 2rem !important;
   height: 300px;
+  align-items: center;
+  align-content: center;
 }
 .Slider .each-fade {
   margin: 0 !important;

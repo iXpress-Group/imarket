@@ -17,7 +17,7 @@ class Slider extends Component {
                 <div className="w3-row">
                     <div className="w3-col s6 m6 l6">
                         <div className="image-container">
-                            <img className="slider-fade-img" src={this.props.img} alt={''}/>
+                            <img className="slider-fade-img" src={this.props.img} alt=""/>
                         </div>
                     </div>
                     <div className="w3-col s6 m6 l6">
