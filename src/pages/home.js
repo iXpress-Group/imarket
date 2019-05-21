@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-// import ReactCountdownClock from 'react-countdown-clock';
 import Countdown from '../components/countdown';
 
 import '../css/pages/home.css';

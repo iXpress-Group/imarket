@@ -28,7 +28,7 @@ class Product extends Component {
         former_price: 224
     };
 
-    // Products will be fetched from the array and added to this array
+    // Products will be fetched from the api and added to this array
 
     arr = [this.products, this.products1,this.products, this.products1,this.products, this.products1,this.products, this.products1];
     path = this.arr.map((num) => num);
@@ -37,7 +37,7 @@ class Product extends Component {
         let products = [];
 
         for (let i = 0; i < this.path.length; i++) {
-            products.push(<ProductComponent{...this.path[i]}/>)
+            products.push(<ProductComponent{...this.path[i]}/>);
         }
         return products;
     };

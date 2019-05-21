@@ -135,7 +135,7 @@ body {
   border: none;
   margin-top: 20px;
     border-radius: 0.6em !important;
-    margin-left: 250px !important;
+    /*margin-left: 5rem !important;*/
 }
 
 .dropbtn-check {
@@ -146,7 +146,7 @@ body {
   border: none;
   margin-top: 20px;
     border-radius: 0.7em !important;
-    margin-left: 250px !important;
+    /*margin-left: 250px !important;*/
 }
 
 .dropdown {

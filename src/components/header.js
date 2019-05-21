@@ -5,11 +5,11 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <p className="text-left">iXpress Market. One stop Grocery Market</p>
+                <img src={require('../assets/images/top.png')} alt=""/>
                 <div className="top-nav-bar">
                     <div className="search-logo">
                         <img src={require("../assets/images/logo2.2.png")} className="logo"/>
-                        <input type="text" placeholder="search" className="txtsrch"/>
+                        <input type="text" placeholder="Let us help you get what you want" className="txtsrch"/>
                         <button type="button" className="btnsrch">Search</button>
 
                     </div>

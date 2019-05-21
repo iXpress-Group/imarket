@@ -1,0 +1,49 @@
+.Slider {
+  margin-top: 3rem !important;
+  height: 300px;
+}
+.Slider .each-fade {
+  margin: 0 !important;
+}
+.Slider .each-fade .image-container {
+  width: 100%;
+  height: 100%;
+}
+.Slider .each-fade .image-container1 {
+  text-align: right;
+  padding-top: 3rem;
+  float: left;
+}
+.Slider .each-fade .image-container1 .firstline {
+  font-size: 1.5rem;
+  color: grey;
+  text-transform: lowercase;
+}
+.Slider .each-fade .image-container1 .secondline {
+  font-size: 1.8rem;
+  color: #f6912c;
+  text-transform: lowercase;
+}
+.Slider .each-fade .image-container1 .lastline {
+  font-size: 1.3rem;
+  color: grey;
+  text-transform: lowercase;
+}
+.Slider .each-fade .image-container1 .home-slider-button {
+  color: #ffffff;
+  background-color: #f6912c;
+  width: 30%;
+  height: 40px;
+  border: none;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  border-radius: 5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.Slider .each-fade .slider-fade-img {
+  width: 50%;
+  height: 50%;
+}
+
+/*# sourceMappingURL=slider.css.map */
