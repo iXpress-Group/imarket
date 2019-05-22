@@ -2,5 +2,13 @@
   text-align: left;
   margin: 10rem 0 0 5rem;
 }
+.Home1 .home-header-new-products {
+  text-align: left;
+  margin: 5rem 0 0 5rem;
+}
+.Home1 .home-header-popular-products {
+  text-align: left;
+  margin: 5rem 0 0 5rem;
+}
 
 /*# sourceMappingURL=home1.css.map */

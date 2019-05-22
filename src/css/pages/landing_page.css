@@ -1,0 +1,23 @@
+.Landing .first-text {
+  float: left;
+  font-size: 3rem;
+  margin: 12rem 5rem 1rem 10rem !important;
+}
+.Landing .first-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.Landing .second-text {
+  font-size: 3rem;
+  margin: 12rem 5rem 1rem 10rem !important;
+}
+.Landing .second-text h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Landing .first-img {
+  margin: 2rem 5rem 0 0 !important;
+  float: left;
+}
+
+/*# sourceMappingURL=landing_page.css.map */

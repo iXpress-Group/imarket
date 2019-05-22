@@ -1,0 +1,32 @@
+.Landing {
+  .first-text {
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    float: left;
+    font-size: 3rem;
+    margin: 12rem 5rem 1rem 10rem !important;
+    //top: 50%;
+    //background-color: #0b2e13;
+  }
+
+  .second-text {
+    h4 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    font-size: 3rem;
+    margin: 12rem 5rem 1rem 10rem !important;
+    //top: 50%;
+    //background-color: #0b2e13;
+  }
+
+  .first-img {
+    margin: 2rem 5rem 0 0 !important;
+    //background-color: yellow;
+    float: left;
+  }
+}
