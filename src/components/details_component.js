@@ -3,7 +3,36 @@ import {Link} from "react-router-dom";
 
 import '../css/pages/details.css';
 
+import {Fade} from "react-slideshow-image";
+import DetailsSlider from '../components/details_slider';
+
+const fadeProperties = {
+    duration: 2000,
+    transitionDuration: 1000,
+    infinite: true,
+    indicators: true,
+    arrows: true,
+};
+
 class DetailsComponent extends Component {
+    url4 = {
+        url1: this.props.imgUrl
+    };
+    url5 = {
+        url1: this.props.imgUrl_alt
+    };
+    arr3 = [this.url4,this.url5];
+    mapArr3 = this.arr3.map((num1) => num1);
+
+    createDetailsImg = () => {
+        let detailImgs = [];
+
+        for (let j = 0; j < this.mapArr3.length; j++) {
+            detailImgs.push(<DetailsSlider {...this.mapArr3[j]}/>);
+        }
+        return detailImgs;
+    };
+
     render() {
         // console.log(this.props.name)
         return (
@@ -12,7 +41,9 @@ class DetailsComponent extends Component {
                     <div className="w3-col s12 m6 l6 ">
                         <div className='details-img-container'>
                             {/*{stuff}*/}
-                            <img className='details-img' src={this.props.imgUrl} alt=""/>
+                            <Fade {...fadeProperties}>
+                                {this.createDetailsImg()}
+                            </Fade>
                         </div>
                     </div>
                     <div className="w3-col s12 m6 l6 ">

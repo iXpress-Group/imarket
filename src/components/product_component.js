@@ -3,6 +3,7 @@ import '../css/pages/product.css';
 import {Link} from 'react-router-dom';
 import Details from '../pages/details';
 
+
 class ProductComponent extends Component {
 
 
@@ -23,10 +24,6 @@ class ProductComponent extends Component {
             <div className="col-md-3 col-sm-6">
                 <div className="product-grid">
                     <div className="product-image">
-                        {/*<Link to={{pathname:'/dev/product-details/',*/}
-                        {/*state:{*/}
-                        {/*    detailsImg:this.props.imgUrl*/}
-                        {/*}}}>*/}
                         <Link to={"/dev/product-details/"+this.props.product_id}>
                             <img className="pic-1" src={this.props.imgUrl} alt={''}/>
                             <img className="pic-2" src={this.props.imgUrl_alt} alt={''}/>
