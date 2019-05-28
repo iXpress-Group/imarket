@@ -21,7 +21,7 @@ class AppRouter extends Component{
 
             <Route exact path={"/"} component={App} />
             <Route exact path={"/dev/products"} component={Product} />
-            <Route exact path={"/dev/product-details"} component={Details} />
+            <Route exact path={"/dev/product-details/:stuff"} component={Details} />
             <Route exact path={"/dev/refer_a_friend"} component={Refer} />
             <Route exact path={"/dev/home"} component={Home1} />
             <Route exact path={"/dev/landing"} component={LandingPage}/>

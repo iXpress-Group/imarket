@@ -3,6 +3,7 @@ import '../css/pages/product.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import ProductComponent from '../components/product_component';
+import DetailsComponent from '../components/details_component';
 
 
 class Product extends Component {
@@ -17,7 +18,8 @@ class Product extends Component {
         imgUrl_alt: require('../assets/images/fish_masala3.jpg'),
         price: 400,
         discount: 25,
-        former_price: 500
+        former_price: 500,
+        product_id:1
     };
     products1 = {
         name: 'Onions',
@@ -25,7 +27,8 @@ class Product extends Component {
         imgUrl_alt: require('../assets/images/onions_alt.jpeg'),
         price: 200,
         discount: 12,
-        former_price: 224
+        former_price: 224,
+        product_id:2
     };
 
     // Products will be fetched from the api and added to this array
@@ -35,9 +38,12 @@ class Product extends Component {
 
     createProducts = () => {
         let products = [];
+        // let product_details = [];
+        // product_details.push(<DetailsComponent{...this.path[1]}/>);
 
         for (let i = 0; i < this.path.length; i++) {
             products.push(<ProductComponent{...this.path[i]}/>);
+
         }
         return products;
     };

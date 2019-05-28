@@ -1,5 +1,54 @@
 .Details .details-container {
-  margin: 10rem;
+  margin: 5rem 10rem;
+}
+.Details .details-container .details-img-container {
+  margin: 0 2rem 0 0;
+}
+.Details .details-container .details-img-container .details-img {
+  width: 100%;
+}
+.Details .details-container .product-details {
+  text-align: left;
+}
+.Details .details-container .product-details .details-first-div {
+  margin-bottom: 2rem;
+}
+.Details .details-container .product-details .details-quantity {
+  margin-bottom: 2rem;
+}
+.Details .details-container .product-details .details-price {
+  color: #828282;
+}
+.Details .details-container .product-details .details-price .line-through {
+  text-decoration: line-through;
+}
+.Details .details-container .product-details .input-quantity {
+  width: 5rem;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  border: 0.1rem #3e821d solid;
+}
+.Details .details-container .product-details .input-quantity:focus {
+  outline: none;
+}
+.Details .details-container .product-details .add-cart {
+  color: #fff;
+  background: #3e821d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 10%;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 63%;
+  transition: all 0.3s linear 0s;
+}
+.Details .details-container .product-details .add-cart:hover {
+  border-radius: 1.3rem;
+  text-decoration: none;
+  background: orange;
+  color: #000;
 }
 
 /*# sourceMappingURL=details.css.map */

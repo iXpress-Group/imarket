@@ -1,32 +1,79 @@
 .Landing {
   .first-text {
+    float: left;
+    font-size: 3rem;
+    margin: 12% 5rem 1rem 10rem !important;
+    //top: 50%;
+    //background-color: #0b2e13;
+
     h2 {
       font-size: 3rem;
       font-weight: bold;
     }
 
-    float: left;
-    font-size: 3rem;
-    margin: 12rem 5rem 1rem 10rem !important;
-    //top: 50%;
-    //background-color: #0b2e13;
   }
-
+  .row1{
+    //border: 3px solid red;
+    margin: 4rem 1rem 2rem 1rem;
+  }
   .second-text {
+    font-size: 3rem;
+    margin: 20% 10rem 1rem 0 !important;
+    float: left;
+    text-align: left;
+    //background-color: #0b2e13;
+
     h4 {
       font-size: 2rem;
       font-weight: bold;
     }
 
-    font-size: 3rem;
-    margin: 12rem 5rem 1rem 10rem !important;
-    //top: 50%;
-    //background-color: #0b2e13;
   }
 
   .first-img {
-    margin: 2rem 5rem 0 0 !important;
+    margin: 0 5rem 0 0 !important;
     //background-color: yellow;
     float: left;
   }
+
+  .third-text{
+    background-color: #dddddd;
+    .third-text-h2{
+      padding: 1rem 15rem;
+    }
+  }
+
+.Rest{
+  .rest-row{
+    margin-top: 3rem;
+    .rest-h4{
+      margin: 0 10rem;
+      text-transform: uppercase;
+      //background-color: green;
+    }
+  }
+
+  .rest-img-div{
+    //background-color: #0c5460;
+    height: 15rem;
+  }
+  .landing-rest-h2{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+
+  .landing-rest-img{
+    width: 60%;
+  }
+
+  .landing-rest-div{
+    width: 100%;
+    height: 100%;
+  }
+  .rest-img{
+    width: 50%;
+  }
+}
 }

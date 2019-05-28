@@ -1,23 +1,60 @@
 .Landing .first-text {
   float: left;
   font-size: 3rem;
-  margin: 12rem 5rem 1rem 10rem !important;
+  margin: 12% 5rem 1rem 10rem !important;
 }
 .Landing .first-text h2 {
   font-size: 3rem;
   font-weight: bold;
 }
+.Landing .row1 {
+  margin: 4rem 1rem 2rem 1rem;
+}
 .Landing .second-text {
   font-size: 3rem;
-  margin: 12rem 5rem 1rem 10rem !important;
+  margin: 20% 10rem 1rem 0 !important;
+  float: left;
+  text-align: left;
 }
 .Landing .second-text h4 {
   font-size: 2rem;
   font-weight: bold;
 }
 .Landing .first-img {
-  margin: 2rem 5rem 0 0 !important;
+  margin: 0 5rem 0 0 !important;
   float: left;
+}
+.Landing .third-text {
+  background-color: #dddddd;
+}
+.Landing .third-text .third-text-h2 {
+  padding: 1rem 15rem;
+}
+.Landing .Rest .rest-row {
+  margin-top: 3rem;
+}
+.Landing .Rest .rest-row .rest-h4 {
+  margin: 0 10rem;
+  text-transform: uppercase;
+}
+.Landing .Rest .rest-img-div {
+  height: 15rem;
+}
+.Landing .Rest .landing-rest-h2 {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.Landing .Rest .landing-rest-img {
+  width: 60%;
+}
+.Landing .Rest .landing-rest-div {
+  width: 100%;
+  height: 100%;
+}
+.Landing .Rest .rest-img {
+  width: 50%;
 }
 
 /*# sourceMappingURL=landing_page.css.map */
