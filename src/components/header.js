@@ -8,7 +8,7 @@ class Header extends Component {
                 <img src={require('../assets/images/top.png')} alt=""/>
                 <div className="top-nav-bar">
                     <div className="search-logo">
-                        <img src={require("../assets/images/logo2.2.png")} className="logo"/>
+                        <img src={require("../assets/images/logo2.2.png")} className="logo" alt={''}/>
                         <input type="text" placeholder="Let us help you get what you want" className="txtsrch"/>
                         <button type="button" className="btnsrch">Search</button>
 
@@ -32,16 +32,16 @@ class Header extends Component {
 
                 <div className="menu-main">
                     <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a className="dropdown-toggle" href="">LOCAL MARKETS</a>
+                        <li><a href="index2.html">HOME</a></li>
+                        <li><a className="dropdown-toggle" href="index2.html">LOCAL MARKETS</a>
                             <ul>
-                                <li><a href="">KIMIRONKO</a></li>
-                                <li><a href="">NYABUGOGO</a></li>
-                                <li><a href="">KIMISAGARA</a></li>
-                                <li><a href="">NAMIRAMBO</a></li>
+                                <li><a href="index2.html">KIMIRONKO</a></li>
+                                <li><a href="index2.html">NYABUGOGO</a></li>
+                                <li><a href="index2.html">KIMISAGARA</a></li>
+                                <li><a href="index2.html">NAMIRAMBO</a></li>
                             </ul>
                         </li>
-                        <li><a className="dropdown-toggle" href="">BUSINESSES</a>
+                        <li><a className="dropdown-toggle" href="index2.html">BUSINESSES</a>
                             <ul>
                                 <li><a href="index2.html">KFAAM</a></li>
                                 <li><a href="index2.html">TRUST INDUSTRIES</a></li>
@@ -49,7 +49,7 @@ class Header extends Component {
                                 <li><a href="index2.html">SAWA CITI</a></li>
                             </ul>
                         </li>
-                        <li><a className="dropdown-toggle" href="">RESTURANTS</a>
+                        <li><a className="dropdown-toggle" href="index2.html">RESTURANTS</a>
                             <ul>
                                 <li><a href="index2.html">JAVA HOUSE</a></li>
                                 <li><a href="index2.html">FIX TECH</a></li>
@@ -57,7 +57,7 @@ class Header extends Component {
                                 <li><a href="index2.html">TINA BUFFET</a></li>
                             </ul>
                         </li>
-                        <li><a className="dropdown-toggle" href="">CONTACT</a>
+                        <li><a className="dropdown-toggle" href="index2.html">CONTACT</a>
                             <ul>
                                 <li><a href="index2.html">TRADER'S</a></li>
                                 <li><a href="index2.html">iXPRESS</a></li>

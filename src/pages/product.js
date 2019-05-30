@@ -33,7 +33,7 @@ class Product extends Component {
 
     // Products will be fetched from the api and added to this array
 
-    arr = [this.products, this.products1,this.products, this.products1,this.products, this.products1,this.products, this.products1];
+    arr = [this.products, this.products1];
     path = this.arr.map((num) => num);
 
     createProducts = () => {
@@ -42,7 +42,7 @@ class Product extends Component {
         // product_details.push(<DetailsComponent{...this.path[1]}/>);
 
         for (let i = 0; i < this.path.length; i++) {
-            products.push(<ProductComponent{...this.path[i]}/>);
+            products.push(<ProductComponent key={this.path[i].product_id}{...this.path[i]}/>);
 
         }
         return products;

@@ -16,7 +16,7 @@ class Home extends Component {
                 <br/>
 
                 <div className="home-container">
-                    <Countdown date={`2019-05-31T00:00:00`}/>
+                    <Countdown date={`2019-06-07T00:00:00`}/>
                     <p className="home-comingsoon">Coming soon!!!</p>
 
                     <img className="home-img" src={require('../assets/images/coverpage.png')} alt=""/>

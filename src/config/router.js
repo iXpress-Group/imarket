@@ -11,6 +11,7 @@ import Product from '../pages/product';
 import Details from '../pages/details';
 import Home1 from '../pages/home1';
 import LandingPage from '../pages/landing_page';
+import AddProduct from '../pages/add_products';
 
 class AppRouter extends Component{
  
@@ -25,6 +26,7 @@ class AppRouter extends Component{
             <Route exact path={"/dev/refer_a_friend"} component={Refer} />
             <Route exact path={"/dev/home"} component={Home1} />
             <Route exact path={"/dev/landing"} component={LandingPage}/>
+            <Route exact path={"/dev/add_products"} component={AddProduct}/>
 
         </Switch>
     </Router>

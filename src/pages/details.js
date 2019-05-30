@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import '../css/pages/product.css';
 import DetailsComponent from '../components/details_component';
+import ImgUpload from '../components/img_upload';
 
 
 class Details extends Component {
@@ -27,7 +28,7 @@ class Details extends Component {
         product_id: "2"
     };
 
-    arr = [this.products, this.products1, this.products, this.products1, this.products, this.products1, this.products, this.products1];
+    arr = [this.products, this.products1];
     path = this.arr.map((num) => num);
 
     createProductDetails = () => {
@@ -36,7 +37,7 @@ class Details extends Component {
 
         for (let i = 0; i < this.path.length; i++) {
             if (this.path[i].product_id === stuff){
-                product_details.push(<DetailsComponent{...this.path[i]}/>);
+                product_details.push(<DetailsComponent key={this.path[i].product_id} {...this.path[i]}/>);
                 break;
             }
         }
@@ -51,6 +52,7 @@ class Details extends Component {
             <div className="Details">
                 <Header/>
                 {this.createProductDetails()}
+                <ImgUpload/>
                 <Footer/>
             </div>
         );

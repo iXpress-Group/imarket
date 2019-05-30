@@ -28,7 +28,7 @@ class DetailsComponent extends Component {
         let detailImgs = [];
 
         for (let j = 0; j < this.mapArr3.length; j++) {
-            detailImgs.push(<DetailsSlider {...this.mapArr3[j]}/>);
+            detailImgs.push(<DetailsSlider key={this.mapArr3[j].url1} {...this.mapArr3[j]}/>);
         }
         return detailImgs;
     };
