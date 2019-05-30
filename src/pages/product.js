@@ -3,14 +3,14 @@ import '../css/pages/product.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import ProductComponent from '../components/product_component';
-import DetailsComponent from '../components/details_component';
+// import DetailsComponent from '../components/details_component';
 
 
 class Product extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     products = {
         name: 'Fish Masala',

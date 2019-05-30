@@ -1,7 +1,7 @@
-import React, { lazy, Suspense, Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { ScrollContext } from 'react-router-scroll-4';
-import request from 'superagent';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+// import { ScrollContext } from 'react-router-scroll-4';
+// import request from 'superagent';
 
 
 import App from '../App';

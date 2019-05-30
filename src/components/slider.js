@@ -7,9 +7,9 @@ import {Link} from "react-router-dom";
 
 class Slider extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (

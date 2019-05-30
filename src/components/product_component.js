@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import '../css/pages/product.css';
 import {Link} from 'react-router-dom';
-import Details from '../pages/details';
+// import Details from '../pages/details';
 
 
 class ProductComponent extends Component {
 
 
-    constructor(props) {
-        super(props);
-        // let path1 = this.props.pars;
-
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // let path1 = this.props.pars;
+    //
+    // }
 
     render() {
 
