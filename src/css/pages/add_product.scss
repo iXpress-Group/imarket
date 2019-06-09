@@ -5,3 +5,29 @@
   }
 }
 
+.AddProduct {
+  margin: 1rem 10rem 1rem 17rem;
+  //border: 3px solid red;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.formcontainer {
+  text-align: left;
+  margin: 1rem 5% 2rem 5%;
+}
+
+.addproductform {
+  margin: 1rem;
+}
+
+.addproductform input::placeholder{
+  padding-left: 1rem;
+  /*color: red;*/
+}
+
+label{
+  font-weight: bolder;
+}
+
