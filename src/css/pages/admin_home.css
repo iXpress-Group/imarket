@@ -1,0 +1,15 @@
+.AdminHome {
+  margin: 1rem 10rem 1rem 17rem;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.AdminHome .adminhomeContainer {
+  margin: 5rem 3rem;
+}
+.AdminHome .adminhomeContainer .adminHeader {
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=admin_home.css.map */

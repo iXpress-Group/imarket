@@ -1,0 +1,14 @@
+.AdminHome {
+  margin: 1rem 10rem 1rem 17rem;
+  //border: 3px solid red;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  .adminhomeContainer{
+    margin: 5rem 3rem;
+    .adminHeader{
+      margin-bottom: 1rem;
+      font-weight: bolder;
+    }
+  }
+}

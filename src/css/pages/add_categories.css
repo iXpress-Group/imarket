@@ -1,9 +1,4 @@
-.NewProduct .addproductContainer {
-  margin: 5rem 10rem;
-  background-color: yellow;
-}
-
-.AddProduct {
+.AddCategory {
   margin: 1rem 10rem 1rem 17rem;
   align-content: center;
   align-items: center;
@@ -14,28 +9,28 @@
   text-align: left;
   margin: 1rem 5% 2rem 5%;
 }
-.formcontainer .admin_row {
+.formcontainer .inner_container {
+  border: 1px #db4144 solid;
   background-color: #db4144;
   border-radius: 2rem;
   box-shadow: 0 6px 7px 7px rgba(0, 0, 0, 0.5);
+  margin: 3rem;
 }
-.formcontainer .admin_row input[type=text], .formcontainer .admin_row select, .formcontainer .admin_row textarea {
+.formcontainer .inner_container input[type=text], .formcontainer .inner_container select, .formcontainer .inner_container textarea {
   outline: none;
   border: none;
   border-radius: 1rem;
 }
-.formcontainer .admin_row input[type=file] {
+.formcontainer .inner_container input[type=file] {
   outline: none;
   border-radius: 2rem;
   cursor: pointer;
 }
-.formcontainer .admin_col1 {
+.formcontainer .inner_container .inner_inner_container {
   margin: 2rem;
+  height: 100%;
 }
-.formcontainer .admin_col2 {
-  margin: 2rem;
-}
-.formcontainer .adminsubmitbutton {
+.formcontainer .adminsubmitbuttoncat {
   margin: 2rem 0 2rem 25%;
   width: 50%;
   background-color: #db4144;
@@ -44,7 +39,7 @@
   text-align: center;
   border-radius: 50%;
 }
-.formcontainer .adminsubmitbutton input[type=submit] {
+.formcontainer .adminsubmitbuttoncat input[type=submit] {
   width: 100%;
   padding: 2rem;
   background-color: #db4144;
@@ -56,7 +51,7 @@
   font-weight: bolder;
   border-radius: 50%;
 }
-.formcontainer .adminsubmitbutton input[type=submit]:hover {
+.formcontainer .adminsubmitbuttoncat input[type=submit]:hover {
   background-color: green;
   box-shadow: 0 3px 12px 4px rgba(0, 0, 0, 0.5);
 }
@@ -74,4 +69,4 @@ label {
   font-weight: bolder;
 }
 
-/*# sourceMappingURL=add_product.css.map */
+/*# sourceMappingURL=add_categories.css.map */

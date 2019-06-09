@@ -1,29 +1,3 @@
-// import React, {Component} from 'react';
-// import Header from '../components/header';
-// import Footer from '../components/footer';
-// import '../css/pages/add_product.css';
-//
-//
-// class AddProduct extends Component {
-//     render() {
-//         return (
-//             <div className='NewProduct'>
-//                 <Header/>
-//                 <div className='addproductContainer'>
-//                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit sint tempora. Ab
-//                         accusantium dicta, dignissimos doloribus eos illo magni minus, natus nobis rerum sed soluta sunt
-//                         tenetur totam vitae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores
-//                         beatae consequatur deleniti deserunt dolorum harum id ipsam nobis numquam omnis placeat
-//                         praesentium quas quia, recusandae rerum soluta vel veniam.</p>
-//                 </div>
-//                 <Footer/>
-//             </div>
-//         );
-//     }
-// }
-//
-// export default AddProduct;
-
 import React, {Component} from 'react';
 import axios from 'axios';
 import '../css/pages/add_product.css';
@@ -141,77 +115,89 @@ class AddProduct extends Component {
                 <h1>Add a Product</h1>
                 <div className='formcontainer'>
                     <form className='w3-container' onSubmit={this.handleSubmit}>
-                        <p>
-                            <label htmlFor="category">Product Category: </label>
-                            <select className='w3-input' name="category" id="category" onChange={this.handleCatChange}
-                                    required>
-                                {this.state.check ? this.getCats() : null}
 
-                                {this.renderTabList()}
+                        <div className="w3-row admin_row">
+                            <div className='w3-col s6 m6 l6'>
+                                <div className="admin_col1">
+                                    <p>
+                                        <label htmlFor="category">Product Category: </label>
+                                        <select className='w3-input' name="category" id="category"
+                                                onChange={this.handleCatChange}
+                                                required>
+                                            {this.state.check ? this.getCats() : null}
+                                            {this.renderTabList()}
+                                            {this.renderCats()}
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="name">Product Name </label>
+                                        <input className='w3-input' type="text" placeholder='Name' id='name'
+                                               value={this.state.name}
+                                               onChange={this.handleChange} required/>
 
+                                    </p>
+                                    <p>
+                                        <label htmlFor="description">Product Description: </label>
+                                        <textarea className='w3-input' placeholder='Description'
+                                               id='description'
+                                               value={this.state.description}
+                                               onChange={this.handleChange} required/>
 
-                                {this.renderCats()}
-                            </select>
-                            {/*<input className='w3-input' type="text" placeholder='Category' id='category'*/}
-                            {/*       value={this.state.category}*/}
-                            {/*       onChange={this.handleChange} required/>*/}
-                        </p>
-                        <p>
-                            <label htmlFor="name">Product Name </label>
-                            <input className='w3-input' type="text" placeholder='Name' id='name' value={this.state.name}
-                                   onChange={this.handleChange} required/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="image">Product Image: </label>
+                                        <input className='w3-input' type="file"
+                                               id="image"
+                                               accept="image/png, image/jpeg" onChange={this.handleImageChange}
+                                               required/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="image_alt">Product Image2: </label>
+                                        <input className='w3-input' type="file"
+                                               id="image_alt"
+                                               accept="image/png, image/jpeg" onChange={this.handlealtImageChange}
+                                               required/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='w3-col s6 m6 l6'>
+                                <div className="admin_col2">
+                                    <p>
+                                        <label htmlFor="former_price">Undiscounted Price: </label>
+                                        <input className='w3-input' type="text" placeholder='Former_price'
+                                               id='former_price'
+                                               value={this.state.former_price}
+                                               onChange={this.handleChange} required/>
 
-                        </p>
-                        <p>
-                            <label htmlFor="description">Product Description: </label>
-                            <input className='w3-input' type="textarea" placeholder='Description' id='description'
-                                   value={this.state.description}
-                                   onChange={this.handleChange} required/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="discount">Discount on Product: </label>
+                                        <input className='w3-input' type="text" placeholder='Discount %' id='discount'
+                                               value={this.state.discount}
+                                               onChange={this.handleChange} required/>
 
-                        </p>
-                        <p>
-                            <label htmlFor="image">Product Image: </label>
-                            <input className='w3-input' type="file"
-                                   id="image"
-                                   accept="image/png, image/jpeg" onChange={this.handleImageChange} required/>
-                        </p>
-                        <p>
-                            <label htmlFor="image_alt">Product Image2: </label>
-                            <input className='w3-input' type="file"
-                                   id="image_alt"
-                                   accept="image/png, image/jpeg" onChange={this.handlealtImageChange} required/>
-                        </p>
-                        <p>
-                            <label htmlFor="former_price">Undiscounted Price: </label>
-                            <input className='w3-input' type="text" placeholder='Former_price' id='former_price'
-                                   value={this.state.former_price}
-                                   onChange={this.handleChange} required/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="price">Selling Price: </label>
+                                        <input className='w3-input' type="text" placeholder='Selling Price' id='price'
+                                               value={this.state.price}
+                                               onChange={this.handleChange} required/>
 
-                        </p>
-                        <p>
-                            <label htmlFor="discount">Discount on Product: </label>
-                            <input className='w3-input' type="text" placeholder='Discount %' id='discount'
-                                   value={this.state.discount}
-                                   onChange={this.handleChange} required/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="productTrackingNo">Product Tracking No.: </label>
+                                        <input className='w3-input' type="text" placeholder='Product Tracking No.'
+                                               id='productTrackingNo'
+                                               value={this.state.productTrackingNo}
+                                               onChange={this.handleChange} required/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="adminsubmitbutton">
+                            <input type="submit" value='Add Product'/>
+                        </div>
 
-                        </p>
-                        <p>
-                            <label htmlFor="price">Selling Price: </label>
-                            <input className='w3-input' type="text" placeholder='Selling Price' id='price'
-                                   value={this.state.price}
-                                   onChange={this.handleChange} required/>
-
-                        </p>
-                        <p>
-                            <label htmlFor="productTrackingNo">Product Tracking No.: </label>
-                            <input className='w3-input' type="text" placeholder='Product Tracking No.'
-                                   id='productTrackingNo'
-                                   value={this.state.productTrackingNo}
-                                   onChange={this.handleChange} required/>
-
-                        </p>
-
-                        <input type="submit"/>
                     </form>
                 </div>
                 <Footer/>

@@ -1,11 +1,4 @@
-.NewProduct {
-  .addproductContainer {
-    margin: 5rem 10rem;
-    background-color: yellow;
-  }
-}
-
-.AddProduct {
+.AddCategory {
   margin: 1rem 10rem 1rem 17rem;
   //border: 3px solid red;
   align-content: center;
@@ -17,10 +10,12 @@
   text-align: left;
   margin: 1rem 5% 2rem 5%;
 
-  .admin_row {
+  .inner_container{
+    border: 1px #db4144 solid;
     background-color: #db4144;
     border-radius: 2rem;
     box-shadow: 0 6px 7px 7px rgba(0, 0, 0, 0.5);
+    margin: 3rem;
 
     input[type='text'],select,textarea{
       outline: none;
@@ -35,19 +30,15 @@
       //background-color: yellow;
       //visibility:hidden;
     }
+
+    .inner_inner_container{
+      margin: 2rem;
+      height: 100%;
+      //margin-top: 5rem;
+    }
   }
 
-  .admin_col1 {
-    margin: 2rem;
-    //background-color: #61dafb;
-  }
-
-  .admin_col2 {
-    margin: 2rem;
-    //background-color: #1c7430;
-  }
-
-  .adminsubmitbutton {
+  .adminsubmitbuttoncat {
     margin: 2rem 0 2rem 25%;
     width: 50%;
     background-color: #db4144;
@@ -76,18 +67,19 @@
       box-shadow: 0 3px 12px 4px rgba(0, 0, 0, 0.5);
     }
   }
+
 }
 
 .addproductform {
   margin: 1rem;
 }
 
-.addproductform input::placeholder {
+.addproductform input::placeholder{
   padding-left: 1rem;
   /*color: red;*/
 }
 
-label {
+label{
   font-weight: bolder;
 }
 
