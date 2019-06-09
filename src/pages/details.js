@@ -52,7 +52,7 @@ class Details extends Component {
     refreshList = () => {
         const {stuff} = this.props.match.params;
         axios
-            .get("http://engineersticity.pythonanywhere.com/api/products/" + stuff)
+            .get("https://engineersticity.pythonanywhere.com/api/products/" + stuff)
             .then(res => this.setState({
                 newList: res.data,
                 uploaded: false,

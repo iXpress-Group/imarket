@@ -22,7 +22,7 @@ class Product extends Component {
 
     refreshList = () => {
         axios
-            .get("http://engineersticity.pythonanywhere.com/api/products/")
+            .get("https://engineersticity.pythonanywhere.com/api/products/")
             .then(res => this.setState({List: res.data, uploaded: false}))
             .catch(err => console.log(err));
     };

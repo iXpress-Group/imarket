@@ -84,7 +84,7 @@ class AddProduct extends Component {
         form_data.append('price', this.state.price);
         form_data.append('productTrackingNo', this.state.productTrackingNo);
 
-        let url = 'http://engineersticity.pythonanywhere.com/api/products/';
+        let url = 'https://engineersticity.pythonanywhere.com/api/products/';
         axios.post(url, form_data, {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -109,7 +109,7 @@ class AddProduct extends Component {
 
     getCats = () => {
         axios
-            .get("http://engineersticity.pythonanywhere.com/api/categories/")
+            .get("https://engineersticity.pythonanywhere.com/api/categories/")
             .then(res => this.setState({catsList: res.data, check: false}))
             .catch(err => console.log(err));
     };
