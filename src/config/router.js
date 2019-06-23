@@ -12,6 +12,7 @@ import Home1 from '../pages/home1';
 import LandingPage from '../pages/landing_page';
 import AddProduct from '../pages/add_products';
 import Admin from '../pages/admin';
+import ProductList from '../pages/checkoutpage';
 
 class AppRouter extends Component{
  
@@ -28,6 +29,7 @@ class AppRouter extends Component{
             <Route exact path={"/dev/landing"} component={LandingPage}/>
             <Route exact path={"/dev/add_products"} component={AddProduct}/>
             <Route exact path={"/admin"} component={Admin}/>
+            <Route exact path={"/checkout"} component={ProductList}/>
 
         </Switch>
     </Router>

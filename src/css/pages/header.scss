@@ -204,3 +204,24 @@
     height: 45px;
   }
 }
+
+.cartListItems{
+  list-style-type: none;
+  text-align: left;
+  //margin-left: 0 !important;
+  //background-color: yellow;
+  li{
+    margin: 1rem;
+    padding: 1rem;
+  }
+  li:hover{
+    background-color: grey;
+  }
+}
+.cartListimg{
+  width: 100%;
+}
+.cartItemsContainer{
+margin-top: 2rem;
+  margin-left: 0 !important;
+}

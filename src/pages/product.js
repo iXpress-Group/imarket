@@ -7,28 +7,95 @@ import Footer from '../components/footer';
 import {Link} from "react-router-dom";
 
 // import DetailsComponent from '../components/details_component';
+let countCart = 0;
+let cartList = [];
 
 
 class Product extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            uploaded: false,
+            List: [],
+            Cart: [],
+            Test: false,
 
-    state = {
-        uploaded: false,
-        List: [],
+        };
+    }
+
+    headerList = {
+        name: "hello",
+        size: 3,
+        list: cartList
     };
 
     componentDidMount() {
+        setTimeout(() => {
+            this.runRefresh();
+        }, 100)
+    };
+
+    runRefresh = () => {
+        this.refreshCart();
         this.refreshList();
-    }
+    };
 
     refreshList = () => {
         axios
             .get("https://engineersticity.pythonanywhere.com/api/products/")
-            .then(res => this.setState({List: res.data, uploaded: false}))
+            .then(res => this.setState({List: res.data, Test: true}))
             .catch(err => console.log(err));
+    };
+    refreshCart = () => {
+        axios
+            .get("https://engineersticity.pythonanywhere.com/api/cart/")
+            .then(res => cartList = res.data)
+            .catch(err => console.log(err));
+    };
+
+    addCart = (category, name, description, image, former_price, price, productTrackingNo) => {
+        let form_data = new FormData();
+        form_data.append('category', category);
+        form_data.append('name', name);
+        form_data.append('description', description);
+        form_data.append('image', image);
+        form_data.append('former_price', former_price);
+        form_data.append('price', price);
+        form_data.append('productTrackingNo', productTrackingNo);
+
+        let url = 'https://engineersticity.pythonanywhere.com/api/cart/';
+        axios.post(url, form_data, {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        })
+            .then(res => {
+                console.log(res.data);
+                alert(name + " added to cart ");
+                window.location.reload();
+            })
+            .catch(err => console.log(err));
+    };
+
+    checkCart = (category, name, description, image, former_price, price, productTrackingNo) => {
+        const {viewCartItem} = this.state;
+        const newList = cartList.filter(cartItem => cartItem.complete === viewCartItem);
+        newList.map(cartItem => cartItem.productTrackingNo === productTrackingNo ?
+            countCart += 1 : null
+        );
+
+        if (countCart === 0) {
+            this.addCart(category, name, description, image, former_price, price, productTrackingNo);
+        } else {
+            alert(name + " is already in your cart!! " + newList.length);
+            countCart = 0;
+        }
     };
 
     renderItems = () => {
         const {viewItem} = this.state;
+        if (!this.state.Test) return <p><i className="fa fa-shopping-cart fa-spin spinnerTest" style={{fontSize: 60}}/>
+        </p>;
         const newItems = this.state.List.filter(
             item => item.complete === viewItem
         );
@@ -48,7 +115,14 @@ class Product extends Component {
                             <li><a href={item.image_alt} data-tip="Add to Wishlist"><i
                                 className="fa fa-shopping-bag"/></a>
                             </li>
-                            <li><a href={item.image} data-tip="Add to Cart"><i
+                            <li onClick={this.checkCart.bind(this,
+                                item.category,
+                                item.name,
+                                item.description,
+                                item.image,
+                                item.former_price,
+                                item.price,
+                                item.productTrackingNo)}><a data-tip="Add to Cart" href={""}><i
                                 className="fa fa-shopping-cart"/></a></li>
                         </ul>
                     </div>
@@ -60,22 +134,29 @@ class Product extends Component {
                         <div className="price">Frw {item.price}
                             <span>Frw {item.former_price}</span>
                         </div>
-                        <a className="add-to-cart" href={item.image}>ADD TO CART</a>
+                        <p onClick={this.checkCart.bind(this,
+                            item.category,
+                            item.name,
+                            item.description,
+                            item.image,
+                            item.former_price,
+                            item.price,
+                            item.productTrackingNo)}
+                           id="btnSearch"
+                           className="add-to-cart">ADD TO CART</p>
                     </div>
                 </div>
             </div>
-
-
         ));
     };
 
     render() {
         return (
             <div>
-                <Header/>
+                <Header {...this.headerList}/>
                 <div className="Products-page">
                     <div className="product-title">
-                        <p>FRUITS</p>
+                        <p>Products</p>
                     </div>
                     <div className="container">
                         <div className="row">

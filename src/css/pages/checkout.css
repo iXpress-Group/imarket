@@ -1,0 +1,73 @@
+html,
+body {
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-toolbar .btn:nth-child(n + 2) {
+    margin-left: 6px;
+}
+
+.checkoutimg {
+    width: 100%;
+}
+
+.checkimg {
+    width: 20%;
+}
+
+.testck {
+    /*background-color: yellow;*/
+    /*margin: 0 20rem 0 0;*/
+}
+
+.checkoutWrapper {
+    margin: 0 30% 0 30%;
+    /*background-color: #3e821d;*/
+}
+
+.checkoutTotal {
+    margin: 30px 30% 2rem 30% !important;
+    background-color: #F6F6F6;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.checkoutButtonDiv {
+    /*background-color: green;*/
+    margin-bottom: 2rem;
+}
+
+.checkoutButton {
+    border: none;
+    outline: none;
+    background-color: green;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.checkoutButton:hover{
+    background-color: orange;
+    box-shadow: 0 3px 12px 4px rgba(0, 0, 0, 0.5);
+    color:white;
+}
+
+.checkoutContainer {
+    margin-top: 6rem !important;
+    /*border: 3px red solid;*/
+    background-color: #c3e6cb;
+}
+
+.header_checkout {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}

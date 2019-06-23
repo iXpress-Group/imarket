@@ -16,7 +16,6 @@ class AddCats extends Component {
         catsList: []
     };
 
-
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
@@ -34,7 +33,6 @@ class AddCats extends Component {
             image: e.target.files[0]
         })
     };
-
 
     handleSubmit = (e) => {
         e.preventDefault();

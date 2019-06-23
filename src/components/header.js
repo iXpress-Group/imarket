@@ -1,7 +1,54 @@
 import React, {Component} from 'react';
 import '../css/pages/header.css';
+import axios from "axios";
+import {Link} from "react-router-dom";
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cList: []
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            axios
+                .get("https://engineersticity.pythonanywhere.com/api/cart/")
+                .then(res => this.setState({cList: res.data, uploaded: false}))
+                .catch(err => console.log(err));
+        }, 100);
+    }
+
+    ex = () => {
+        const {viewItem} = this.state;
+        const newItems = this.state.cList.filter(
+            item => item.complete === viewItem
+        );
+        return newItems.length;
+    };
+    ex1 = () => {
+        const {viewItem} = this.state;
+        const newItems = this.state.cList.filter(
+            item => item.complete === viewItem
+        );
+        return newItems.map(item => (
+            <li>
+                <div className='w3-row '>
+                    <div className='w3-col s4 m4 b4 '>
+                        <img className='cartListimg' src={item.image} alt=""/>
+                    </div>
+                    <div className='w3-col s4 m4 b4'>
+                        {item.name}
+                    </div>
+                    <div className='w3-col s4 m4 b4'>
+                        {item.price}
+                    </div>
+                </div>
+            </li>
+        ))
+    };
+
     render() {
         return (
             <div>
@@ -17,12 +64,19 @@ class Header extends Component {
                     {/*// <!-- ===========================================Cart=========================== -->*/}
                     <div className="menu-bar">
                         <div className="dropdown">
-                            <button className="dropbtn"><i className="fa fa-shopping-basket"/>Cart</button>
+                            <button className="dropbtn"><i className="fa fa-shopping-basket"/>Cart <sup
+                                style={{color: 'black'}}>{this.ex()}</sup></button>
                             <div className="dropdown-content">
-                                <p>Your Cart is Empty.</p>
-                                <button className="dropbtn-check"><i className="fa fa-shopping-basket"/>Checkout Your
-                                    Order
-                                </button>
+                                <div className='cartItemsContainer'>{this.ex() > 0 ?
+                                    <ol className='cartListItems'>
+                                        {this.ex1()}
+                                    </ol> :
+                                    <p>Your Cart is Empty </p>}
+                                </div>
+                                <Link to={'/checkout'}>
+                                    <button className="dropbtn-check"><i className="fa fa-shopping-basket"/>Checkout
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

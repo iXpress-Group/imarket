@@ -193,6 +193,7 @@
     left: 50%;
     top: 100px;
     transition: all 0.3s linear 0s;
+    cursor: pointer;
 }
 .product-grid .add-to-cart:hover {
     border-radius: 50px;
@@ -203,6 +204,14 @@
 .product-grid:hover .add-to-cart { opacity: 1; }
 @media only screen and (max-width:990px){
     .product-grid{ margin-bottom: 30px; }
+}
+
+.spinnerTest{
+    color:orange;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-left:45rem !important;
 }
 
 
