@@ -42,13 +42,13 @@ class Product extends Component {
 
     refreshList = () => {
         axios
-            .get("https://engineersticity.pythonanywhere.com/api/products/")
+            .get("https://benedict1.pythonanywhere.com/api/products/")
             .then(res => this.setState({List: res.data, Test: true}))
             .catch(err => console.log(err));
     };
     refreshCart = () => {
         axios
-            .get("https://engineersticity.pythonanywhere.com/api/cart/")
+            .get("https://benedict1.pythonanywhere.com/api/cart/")
             .then(res => cartList = res.data)
             .catch(err => console.log(err));
     };
@@ -63,7 +63,7 @@ class Product extends Component {
         form_data.append('price', price);
         form_data.append('productTrackingNo', productTrackingNo);
 
-        let url = 'https://engineersticity.pythonanywhere.com/api/cart/';
+        let url = 'https://benedict1.pythonanywhere.com/api/cart/';
         axios.post(url, form_data, {
             headers: {
                 'content-type': 'multipart/form-data'

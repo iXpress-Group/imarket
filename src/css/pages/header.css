@@ -1,4 +1,24 @@
 /*-----------------------------------Navbar------------------------*/
+.top-header-row .footer-social-ul {
+  margin-top: 0 !important;
+}
+.top-header-row .footer-social-ul .logout-header:hover {
+  cursor: pointer;
+  color: red;
+}
+.top-header-row .footer-social-ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 1.2rem;
+}
+.top-header-row .footer-social-ul .footer-links {
+  color: #000000;
+  font-weight: bolder;
+}
+.top-header-row .footer-social-ul .footer-links:hover {
+  color: #3176ba;
+}
+
 .text-left {
   font-size: 12px;
   margin-top: 3px;

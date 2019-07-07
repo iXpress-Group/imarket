@@ -124,7 +124,7 @@ class ProductList extends Component {
     componentDidMount() {
         setTimeout(() => {
             axios
-                .get("https://engineersticity.pythonanywhere.com/api/cart/")
+                .get("https://benedict1.pythonanywhere.com/api/cart/")
                 .then(res => this.setState({productList: res.data, uploaded: false}))
                 .catch(err => console.log(err));
             // this.setState({productList: productList});

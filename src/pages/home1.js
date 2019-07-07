@@ -7,7 +7,7 @@ import {Fade} from "react-slideshow-image";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import CatSlide from '../components/cat_slide';
-// import {Slide} from 'react-slideshow-image';
+                                                                                                                                                                                                                                                                                                // import {Slide} from 'react-slideshow-image';
 import {Zoom} from 'react-slideshow-image';
 import ProductComponent from "../components/product_component";
 

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import '../css/pages/header.css';
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from 'react-router-dom';
+
+import {connect} from 'react-redux';
+import * as actions from '../store/actions/auth';
 
 class Header extends Component {
     constructor(props) {
@@ -14,7 +17,7 @@ class Header extends Component {
     componentDidMount() {
         setTimeout(() => {
             axios
-                .get("https://engineersticity.pythonanywhere.com/api/cart/")
+                .get("https://benedict1.pythonanywhere.com/api/cart/")
                 .then(res => this.setState({cList: res.data, uploaded: false}))
                 .catch(err => console.log(err));
         }, 100);
@@ -52,13 +55,38 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <img src={require('../assets/images/top.png')} alt=""/>
+                <div className='top-header-row'>
+                    <ul className='footer-social-ul'>
+                        {this.props.isAuthenticated ?
+                            <li><i className="fas fa-user-circle"/> Welcome {this.props.nameEras}</li>
+                            :
+                            null
+                        }
+
+                        {this.props.isAuthenticated ?
+                            <Link className='footer-links' to={''}>
+                            <li><i className="fas fa-user-circle"/> Account</li>
+                        </Link>
+                            :
+                            <Link className='footer-links' to={'/signup'}>
+                                <li><i className="fas fa-user-circle"/> Register</li>
+                            </Link>
+                        }
+
+                        {this.props.isAuthenticated ?
+                            <li className='logout-header' onClick={this.props.logout}><i className="fas fa-sign-in-alt"/> Logout</li>
+                            :
+                            <Link className='footer-links' to={'/login'}>
+                                <li><i className='fas fa-user-plus'/> LogIn</li>
+                            </Link>
+                        }
+                    </ul>
+                </div>
                 <div className="top-nav-bar">
                     <div className="search-logo">
                         <img src={require("../assets/images/logo2.2.png")} className="logo" alt={''}/>
                         <input type="text" placeholder="Let us help you get what you want" className="txtsrch"/>
                         <button type="button" className="btnsrch">Search</button>
-
                     </div>
 
                     {/*// <!-- ===========================================Cart=========================== -->*/}
@@ -124,4 +152,21 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        loading: state.loading,
+        error: state.error,
+        isAuthenticated: state.token !== null,
+        nameEras:state.token
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onAuth: (username, password) => dispatch(actions.authLogin(username, password)),
+        onTryAutoSignup: () => dispatch(actions.authCheckState()),
+        logout: () => dispatch(actions.logout())
+    }
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

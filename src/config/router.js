@@ -4,15 +4,20 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // import request from 'superagent';
 
 
-import App from '../App';
+// import App from '../App';
 import Refer from '../pages/refer_a_friend';
 import Product from '../pages/product';
 import Details from '../pages/details';
 import Home1 from '../pages/home1';
+import Home from '../pages/home';
 import LandingPage from '../pages/landing_page';
 import AddProduct from '../pages/add_products';
 import Admin from '../pages/admin';
 import ProductList from '../pages/checkoutpage';
+
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+// import LoginCall from "../pages/loginCall";
 
 class AppRouter extends Component{
  
@@ -21,7 +26,7 @@ class AppRouter extends Component{
             <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
 
-            <Route exact path={"/"} component={App} />
+            <Route exact path={"/"} component={Home} />
             <Route exact path={"/dev/products"} component={Product} />
             <Route exact path={"/dev/product-details/:stuff"} component={Details} />
             <Route exact path={"/dev/refer_a_friend"} component={Refer} />
@@ -30,6 +35,8 @@ class AppRouter extends Component{
             <Route exact path={"/dev/add_products"} component={AddProduct}/>
             <Route exact path={"/admin"} component={Admin}/>
             <Route exact path={"/checkout"} component={ProductList}/>
+            <Route exact path={"/login"} component={Login} />
+            <Route exact path={"/signup"} component={Signup} />
 
         </Switch>
     </Router>

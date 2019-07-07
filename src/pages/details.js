@@ -44,22 +44,19 @@ class Details extends Component {
         return detailImgs;
     };
 
-
     componentDidMount() {
         this.refreshList();
     }
-
     refreshList = () => {
         const {stuff} = this.props.match.params;
         axios
-            .get("https://engineersticity.pythonanywhere.com/api/products/" + stuff)
+            .get("https://benedict1.pythonanywhere.com/api/products/" + stuff)
             .then(res => this.setState({
                 newList: res.data,
                 uploaded: false,
             }))
             .catch(err => console.log(err));
     };
-
 
     renderItems = () => {
         const newItems = this.state.newList;
@@ -72,7 +69,6 @@ class Details extends Component {
         let arr3 = [url4, url5];
         let mapArr3 = arr3.map((num1) => num1);
         return (
-
             <div className="details-container">
                 <div className="w3-row">
                     <div className="w3-col s12 m6 l6 ">

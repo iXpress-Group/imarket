@@ -43,7 +43,7 @@ class AddCats extends Component {
         form_data.append('parent', this.state.parent);
         form_data.append('image', this.state.image, this.state.image.name);
 
-        let url = 'https://engineersticity.pythonanywhere.com/api/categories/';
+        let url = 'https://benedict1.pythonanywhere.com/api/categories/';
         axios.post(url, form_data, {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -63,7 +63,7 @@ class AddCats extends Component {
 
     getCats = () => {
         axios
-            .get("https://engineersticity.pythonanywhere.com/api/categories/")
+            .get("https://benedict1.pythonanywhere.com/api/categories/")
             .then(res => this.setState({catsList: res.data, check: false}))
             .catch(err => console.log(err));
     };

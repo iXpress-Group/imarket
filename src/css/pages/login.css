@@ -1,0 +1,12 @@
+.Login-page {
+  margin: 5rem 30%;
+}
+.Login-page h1 {
+  font-weight: bolder;
+}
+
+.loggedIn {
+  margin-top: 5rem;
+}
+
+/*# sourceMappingURL=login.css.map */
