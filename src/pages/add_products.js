@@ -51,7 +51,7 @@ class AddProduct extends Component {
         form_data.append('category', this.state.category);
         form_data.append('name', this.state.name);
         form_data.append('description', this.state.description);
-        form_data.append('image', this.state.image, this.state.image.name);
+        form_data.append('image', this.state.image);
         form_data.append('image_alt', this.state.image_alt);
         form_data.append('former_price', this.state.former_price);
         form_data.append('discount', this.state.discount);
@@ -115,7 +115,6 @@ class AddProduct extends Component {
                 <h1>Add a Product</h1>
                 <div className='formcontainer'>
                     <form className='w3-container' onSubmit={this.handleSubmit}>
-
                         <div className="w3-row admin_row">
                             <div className='w3-col s6 m6 l6'>
                                 <div className="admin_col1">
@@ -148,14 +147,14 @@ class AddProduct extends Component {
                                         <label htmlFor="image">Product Image: </label>
                                         <input className='w3-input' type="file"
                                                id="image"
-                                               accept="image/png, image/jpeg" onChange={this.handleImageChange}
+                                               accept="image/png, image/jpeg, image/jpg" onChange={this.handleImageChange}
                                                required/>
                                     </p>
                                     <p>
                                         <label htmlFor="image_alt">Product Image2: </label>
                                         <input className='w3-input' type="file"
                                                id="image_alt"
-                                               accept="image/png, image/jpeg" onChange={this.handlealtImageChange}
+                                               accept="image/png, image/jpeg, image/jpg" onChange={this.handlealtImageChange}
                                                required/>
                                     </p>
                                 </div>

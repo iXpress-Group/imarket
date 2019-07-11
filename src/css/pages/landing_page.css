@@ -1,40 +1,64 @@
+.Landing {
+  margin: 1rem 15%;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 1rem;
+}
+.Landing .landing-header {
+  margin: 3rem;
+}
+.Landing .landing-header button {
+  padding: 1rem;
+  background-color: green;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 2rem;
+}
 .Landing .first-text {
-  float: left;
-  font-size: 3rem;
-  margin: 12% 5rem 1rem 10rem !important;
+  text-align: center;
+  margin: 25% 5rem 1rem 5rem !important;
+  text-transform: uppercase;
 }
 .Landing .first-text h2 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
 }
 .Landing .row1 {
   margin: 4rem 1rem 2rem 1rem;
 }
+.Landing .row1 img {
+  border-radius: 50%;
+  width: 100%;
+}
+.Landing .row2 {
+  margin: 4rem 1rem 2rem 1rem;
+}
+.Landing .row2 img {
+  border-radius: 40%;
+  width: 100%;
+}
 .Landing .second-text {
   font-size: 3rem;
-  margin: 20% 10rem 1rem 0 !important;
+  margin: 15% 2rem 1rem 2rem !important;
   float: left;
   text-align: left;
 }
 .Landing .second-text h4 {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.8rem;
 }
 .Landing .first-img {
   margin: 0 5rem 0 0 !important;
   float: left;
 }
-.Landing .third-text {
-  background-color: #dddddd;
-}
 .Landing .third-text .third-text-h2 {
-  padding: 1rem 15rem;
+  padding: 1rem;
+  font-size: 1.8rem;
 }
 .Landing .Rest .rest-row {
   margin-top: 3rem;
 }
 .Landing .Rest .rest-row .rest-h4 {
-  margin: 0 10rem;
+  margin: 0 5rem;
   text-transform: uppercase;
 }
 .Landing .Rest .rest-img-div {
@@ -47,7 +71,8 @@
   font-size: 2.5rem;
 }
 .Landing .Rest .landing-rest-img {
-  width: 60%;
+  width: 70%;
+  border-radius: 1rem;
 }
 .Landing .Rest .landing-rest-div {
   width: 100%;
@@ -55,6 +80,49 @@
 }
 .Landing .Rest .rest-img {
   width: 50%;
+}
+.Landing .vendors {
+  margin-top: 2rem;
+}
+.Landing .vendors h2 {
+  margin: 0 3rem;
+  font-size: 1.4rem;
+}
+.Landing .vendors h3 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.Landing .vendors .vendor-examples {
+  margin: 3rem;
+}
+.Landing .vendors .vendor-examples img {
+  width: 100%;
+}
+.Landing .vendors .vendor-examples h3 {
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.Landing .vendors .shop-button button {
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  border: none;
+  background-color: green;
+  color: #FFFFFF;
+  border-radius: 40%;
+  text-transform: uppercase;
+}
+.Landing .family {
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+.Landing .family .family-div p {
+  margin: 20% 4% 0 20%;
+  font-size: 2rem;
+  text-align: left;
+}
+.Landing .family .family-div img {
+  width: 100%;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=landing_page.css.map */

@@ -104,9 +104,8 @@ class Product extends Component {
                 <div className="product-grid">
                     <div className="product-image">
                         <Link to={"/dev/product-details/" + item.id}>
-                            <img className="pic-1" src={item.image} alt={''}/>
-                            <img className="pic-2" src={item.image_alt} alt={''}/>
-
+                            <img className="pic-1" src={`https://benedict1.pythonanywhere.com${item.image}`} alt={''}/>
+                            <img className="pic-2" src={`https://benedict1.pythonanywhere.com${item.image_alt}`} alt={''}/>
                         </Link>
                         <span className="product-discount-label">-{item.discount}%</span>
                         <ul className="social">

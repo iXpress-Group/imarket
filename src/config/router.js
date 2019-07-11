@@ -26,7 +26,7 @@ class AppRouter extends Component{
             <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Switch>
 
-            <Route exact path={"/"} component={Home} />
+            <Route exact path={"/"} component={LandingPage} />
             <Route exact path={"/dev/products"} component={Product} />
             <Route exact path={"/dev/product-details/:stuff"} component={Details} />
             <Route exact path={"/dev/refer_a_friend"} component={Refer} />

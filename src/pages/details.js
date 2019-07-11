@@ -61,10 +61,10 @@ class Details extends Component {
     renderItems = () => {
         const newItems = this.state.newList;
         let url4 = {
-            url1: newItems.image
+            url1: `https://benedict1.pythonanywhere.com${newItems.image}`
         };
         let url5 = {
-            url1: newItems.image_alt
+            url1: `https://benedict1.pythonanywhere.com${newItems.image_alt}`
         };
         let arr3 = [url4, url5];
         let mapArr3 = arr3.map((num1) => num1);

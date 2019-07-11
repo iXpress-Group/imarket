@@ -1,79 +1,171 @@
 .Landing {
+  margin: 1rem 15%;
+  border:0.1rem #c0c0c0 solid;
+  border-radius: 1rem;
+
+  .landing-header{
+margin: 3rem;
+    button{
+      padding: 1rem;
+      background-color: green;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      border: none;
+      margin-top: 2rem;
+    }
+  }
+
   .first-text {
-    float: left;
-    font-size: 3rem;
-    margin: 12% 5rem 1rem 10rem !important;
-    //top: 50%;
-    //background-color: #0b2e13;
+    text-align: center;
+    margin: 25% 5rem 1rem 5rem !important;
+    text-transform: uppercase;
 
     h2 {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 2rem;
     }
 
   }
-  .row1{
-    //border: 3px solid red;
+
+  .row1 {
     margin: 4rem 1rem 2rem 1rem;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
   }
+
+  .row2 {
+    margin: 4rem 1rem 2rem 1rem;
+
+    img {
+      border-radius: 40%;
+      width: 100%;
+    }
+  }
+
   .second-text {
     font-size: 3rem;
-    margin: 20% 10rem 1rem 0 !important;
+    margin: 15% 2rem 1rem 2rem !important;
     float: left;
     text-align: left;
-    //background-color: #0b2e13;
 
     h4 {
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 1.8rem;
     }
 
   }
 
   .first-img {
     margin: 0 5rem 0 0 !important;
-    //background-color: yellow;
     float: left;
   }
 
-  .third-text{
-    background-color: #dddddd;
-    .third-text-h2{
-      padding: 1rem 15rem;
+  .third-text {
+
+    .third-text-h2 {
+      padding: 1rem;
+      font-size: 1.8rem;
     }
   }
 
-.Rest{
-  .rest-row{
-    margin-top: 3rem;
-    .rest-h4{
-      margin: 0 10rem;
+  .Rest {
+    .rest-row {
+      margin-top: 3rem;
+
+      .rest-h4 {
+        margin: 0 5rem;
+        text-transform: uppercase;
+        //background-color: green;
+      }
+    }
+
+    .rest-img-div {
+      height: 15rem;
+    }
+
+    .landing-rest-h2 {
+      margin-top: 2rem;
       text-transform: uppercase;
-      //background-color: green;
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
+
+    .landing-rest-img {
+      width: 70%;
+      border-radius: 1rem;
+    }
+
+    .landing-rest-div {
+      width: 100%;
+      height: 100%;
+    }
+
+    .rest-img {
+      width: 50%;
     }
   }
 
-  .rest-img-div{
-    //background-color: #0c5460;
-    height: 15rem;
-  }
-  .landing-rest-h2{
+  .vendors {
     margin-top: 2rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 2.5rem;
+
+    h2 {
+      margin: 0 3rem;
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: bolder;
+    }
+
+    .vendor-examples {
+      margin: 3rem;
+
+      img {
+        width: 100%;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+    }
+
+    .shop-button {
+      button {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        border: none;
+        background-color: green;
+        color: #FFFFFF;
+        border-radius: 40%;
+        text-transform: uppercase;
+      }
+      button:hover{
+
+      }
+    }
   }
 
-  .landing-rest-img{
-    width: 60%;
+  .family{
+    margin-top: 2rem;
+    margin-right: 1rem;
+    .family-div{
+      p{
+        margin: 20% 4% 0 20% ;
+        font-size: 2rem;
+        text-align: left;
+      }
+      img{
+        width: 100%;
+        border-radius: 1rem;
+      }
+    }
   }
+  .end{
+    //margin: 2rem 2rem 2rem 10rem;
 
-  .landing-rest-div{
-    width: 100%;
-    height: 100%;
   }
-  .rest-img{
-    width: 50%;
-  }
-}
 }
