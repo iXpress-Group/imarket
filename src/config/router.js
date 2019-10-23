@@ -9,7 +9,7 @@ import Refer from '../pages/refer_a_friend';
 import Product from '../pages/product';
 import Details from '../pages/details';
 import Home1 from '../pages/home1';
-import Home from '../pages/home';
+// import Home from '../pages/home';
 import LandingPage from '../pages/landing_page';
 import AddProduct from '../pages/add_products';
 import Admin from '../pages/admin';
@@ -18,6 +18,7 @@ import ProductList from '../pages/checkoutpage';
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 // import LoginCall from "../pages/loginCall";
+import EditFiles from '../pages/pay';
 
 class AppRouter extends Component{
  
@@ -37,6 +38,7 @@ class AppRouter extends Component{
             <Route exact path={"/checkout"} component={ProductList}/>
             <Route exact path={"/login"} component={Login} />
             <Route exact path={"/signup"} component={Signup} />
+            <Route exact path={"/pay"} component={EditFiles}/>
 
         </Switch>
     </Router>
