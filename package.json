@@ -13,7 +13,7 @@
     "google-distance": "^1.0.1",
     "google-distance-matrix": "^1.1.1",
     "image-downloader": "^3.4.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prop-types": "latest",
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
